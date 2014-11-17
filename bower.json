@@ -1,0 +1,22 @@
+{
+  "name": "fumanchu.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/JasonSmith-FlatironsSolutions/fumanchu.js",
+  "authors": [
+    "Jason Smith <jason.smith@flatironssolutions.com>"
+  ],
+  "description": "All-code templating for JavaScript.",
+  "main": "fumanchu.js",
+  "keywords": [
+    "template",
+    "markup"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
