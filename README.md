@@ -77,7 +77,7 @@ The rules:
 
 `fumanchu.js` is a play on `moustache`, `handlebars`, and all the other bad puns associated with JavaScript templating
 engines. The fact is, brackets and curley-braces ('[..]' and '{..}') kind of look like moustaches if you turn them sideways
-and are not too picky. Brackets look particularly like a "Fu Manchu" moustache. So JavaScript Arrays and Objects just
+and squint. Brackets look particularly like a "Fu Manchu" moustache. So JavaScript Arrays and Objects just
 naturally look like oodles of lip hair, from a certain viewpoint. Try to get that image out of your head.
 
 Okay, look, this library is still in the early stages of infancy. There is a lot more I want it to do, and it has
