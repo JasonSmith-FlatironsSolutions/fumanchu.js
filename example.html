@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Fumanchu.js Example</title>
+        <!--
+        JQuery is included to demostrate how it works with fumanchu.js, but it is not required.
+        -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="fumanchu.js"></script>
+        <script type="text/javascript">
+            /*
+             * Here are some hackable examples. Have fun!
+             */
+
+            window.addEventListener('load', function(e){
+                /**
+                 * When the "Hello" button is clicked, add a paragraph with "Hello, world." to the
+                 * body.
+                 */
+                document.querySelector('button#hello').onclick = function(){
+                    document.querySelector('body').appendChild(['p', 'Hello, world.'].toHtml());
+                };
+
+                /**
+                 * When the "Timestamp" button is clicked, add a new paragraph with the current
+                 * time to the document body. This demonstrates how to do it *without* JQuery.
+                 */
+                document.querySelector('button#print-timestamp').onclick = function(){
+                    document.querySelector('body').appendChild(['p', new Date()].toHtml());
+                };
+
+                /**
+                 * This works identically to the "Timestamp" button, but is implemented
+                 * using JQuery.
+                 */
+                $('button#print-timestamp-jquery').click(function(){
+                    $('body').append(['p', new Date()].toHtml());
+                });
+
+                /**
+                 * We need some data to work with. 
+                 */
+                var data = {
+                    a: 1,
+                    b: 2,
+                    c: ['span', {style: 'background-color: #fcc;'},
+                        ['b', 'some'], ' ',
+                        ['em', 'embedded'], ' ',
+                        ['small', 'markup'], '.'],
+                    d: '<<<A string with "&" and other \'bad\' characters.>>>'};
+
+                /**
+                 * When the "Make Table" button is clicked, generate a new HTML Table
+                 * from {@link data} and append it to the body.
+                 */
+                $('button#make-table').click(function(event){
+                    $('body').append(
+                            ['table', {border: 1},
+                                ['thead',
+                                    ['th', 'Key'],
+                                    ['th', 'Value']],
+                                ['tbody'].concat(Object.keys(data).map(function(key){
+                                        return ['tr',
+                                            ['td', {valign: 'top'}, ['code', key]],
+                                            ['td', {valign: 'top'}, data[key]]];
+                                    }))].toHtml());
+                });
+
+
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <button id="hello">Hello</button>
+            <button id="print-timestamp">Timestamp</button>
+            <button id="print-timestamp-jquery">Timestamp (JQuery)</button>
+            <button id="make-table">Make Table</button>
+        </div>
+    </body>
+</html>

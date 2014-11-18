@@ -1,8 +1,11 @@
 /**
- * Created by Jason Smith on 11/10/14.
+ * Client-side JavaScript templating that is light, fast, and all JavaScript.
+ * @copyright Copyright (c) 2014 Jason Smith
+ * @license MIT
+ * @module fumanchu.js
+ * @author Jason Smith
  */
-
-var FuManchu = (function(document){
+(function(document){
     "use strict";
 
     /**
@@ -21,7 +24,7 @@ var FuManchu = (function(document){
             }
 
             if (Object.prototype.toString.call(struct[0]) !== '[object String]') {
-                throw new Error('Tag name is not a string.')
+                throw new Error('Tag name is not a string: ' + JSON.stringify(struct[0]));
             }
         })();
 
@@ -50,17 +53,19 @@ var FuManchu = (function(document){
         return elt;
     }
 
-    return {
-        docify: docify
-    };
-
+    if(document && !Array.prototype.toHtml) {
+        Object.defineProperty(
+            Array.prototype,
+            'toHtml',
+            {
+                enumerable: false,
+                configurable: true,
+                writable: true,
+                value: function toHtml() {
+                    return docify(this);
+                }
+            });
+    }
 })(document);
 
-/**
- * Convert the array, in "FuManchu" form, to HTML DOM.
- * @returns {HTMLBaseElement} The element, whatever it happens to be.
- */
-Array.prototype.toHtml = function() {
-    "use strict";
-    return FuManchu.docify(this);
-};
+
