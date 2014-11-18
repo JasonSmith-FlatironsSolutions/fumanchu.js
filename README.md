@@ -14,7 +14,7 @@ HTML markup is just super. Most of the time. Well, some of the time.
 When it finds its way into my JavaScript as generated string data,
 it is not super. It is annoying. JQuery doesn't help (still stuck with lots of angle brackets). Templating engines with "moustache"
 syntax separate my markup from my code,
-which is not what I want. DOM manipulations, while being all code, are obnoxiously verbose. Come on! I just want the
+and why am I generating HTML markup in string form anyway? DOM manipulations, while being all code, are obnoxiously verbose. Come on! I just want the
 ability to generate content using normal JavaScript paradigms. Is that so wrong?
 
 In JavaScript, writing data structures using lists and maps (arrays and objects) is not only trivial, but incredibly
