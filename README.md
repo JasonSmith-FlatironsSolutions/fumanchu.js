@@ -54,7 +54,7 @@ share HTML markup as pure JSON documents. Think of all the things you could do..
 ### If only there were a simple way to turn this into HTML!
 
 `fumanchu.js` is a light and fast library that converts JavaScript structures of a specific form to
-HTML DOM objects. Check out `example.html` for some hackable examples that range from simple to mildly complex,
+HTML DOM objects. Check out `./example.html` for some hackable examples that range from simple to mildly complex,
 with and without JQuery.
 
 `fumanchu.js` adds `Array.prototype.toHtml()` to convert a properly formed JavaScript `Array` into a browser DOM element.
@@ -64,7 +64,7 @@ It is as simple as this:
 document.querySelector('body').append( ['p', 'Hello, world!'].toHtml() );
 ```
 
-Seriously, scroll back up and look at `example.html`, now. I can wait. It will clear up a bunch of questions.
+Seriously, scroll back up and look at `./example.html`, now. I can wait. It will clear up a bunch of questions.
 
 The rules:
 
