@@ -48,7 +48,7 @@ var htmlPage =
 ```
 
 That's 100% JavaScript code, and it is also 100% JavaScript arrays and objects. Think of the possibilities.
-I could generate HTML documents using normal `Array` and `Object` methods like `.map()` and `.concat()`. I could
+You could generate HTML documents using normal `Array` and `Object` methods like `.map()` and `.concat()`. You could
 share HTML markup as pure JSON documents. Think of all the things you could do...
 
 ### If only there were a simple way to turn this into HTML!
