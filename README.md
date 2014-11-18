@@ -41,7 +41,7 @@ var htmlPage =
     ['html', {lang: 'en'},
         ['head',
             ['title', 'My Page'],
-            ['link', {rel: 'icon', href='./images/favicon.ico'}]],
+            ['link', {rel: 'icon', href: './images/favicon.ico'}]],
         ['body',
             ['h1', 'My Page'],
             ['p', 'This is my page.']]];
