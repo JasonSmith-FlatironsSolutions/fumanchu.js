@@ -1,5 +1,5 @@
-fumanchu.js
-===========
+fumanchu.js >:[D
+================
 
 All-code templating for JavaScript.
 -----------------------------------
@@ -72,6 +72,11 @@ The rules:
   * For the remaining items:
     * If the item is an `Array`, it is a child HTML element.
     * Otherwise, the item is converted to a `String` and treated as (automatically escaped) text.
+
+`fumanchu.js` is a play on `moustache`, `handlebars`, and all the other bad puns associated with JavaScript templating
+engines. The fact is, brackets and curley-braces ('[..]' and '{..}') kind of look like moustaches if you turn them sideways
+and are not too picky. Brackets look particularly like a "Fu Manchu" moustache. So JavaScript Arrays and Objects just
+naturally look like oodles of lip hair, from a certain viewpoint. Try to get that image out of your head.
 
 Okay, look, this library is still in the early stages of infancy. There is a lot more I want it to do, and it has
 some rough edges. Still, it is very simple, and I don't expect it to get much more complex.
